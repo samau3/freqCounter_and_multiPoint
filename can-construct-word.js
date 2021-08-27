@@ -30,11 +30,12 @@ function canConstructWord(word, letters) {
     let wordCounter = {};
     let lettersCounter = {};
 
+    // maybe use helper func
     for (let char of word) {
         wordCounter[char] = (wordCounter[char] || 0) + 1;
     }
 
-    for (let char of letters) {
+    for (let char of letters) { // consider letter of letters
         lettersCounter[char] = (lettersCounter[char] || 0) + 1;
     }
 

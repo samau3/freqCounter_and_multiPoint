@@ -5,7 +5,7 @@
  *
  */
 
-//TODO:
+//TODO: // remove 
 //1. Need to check pair in array. (2 values);
 //Set two pointer variables one at beginning, one at end
 //Check pointer values with loop.

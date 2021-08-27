@@ -17,8 +17,8 @@ function twoArrayObject(keyArray, valueArray) {
     let freqCount = {};
 
     for (let i = 0; i < keyArray.length; i++) {
-        freqCount[keyArray[i]] = valueArray[i];
-        if (freqCount[keyArray[i]] === undefined) {
+        freqCount[keyArray[i]] = valueArray[i]; // make a variable e.g. currValue = freqCount...
+        if (freqCount[keyArray[i]] === undefined) { // could use ternary
             freqCount[keyArray[i]] = null;
         }
     }
