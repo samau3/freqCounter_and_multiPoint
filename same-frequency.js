@@ -14,8 +14,11 @@
 //3. Set up a helper function,
 //3.a return a string, set to an array and sort to easily compare
 
-//Since both are of same value can loop through one number.
-//While looping check if each number matches
+//4. Since both are of same value can loop through one number.
+//4.a set a pointer for num1 to compare in num2 loop.
+//While looping check if each number matches, if they match add to pointer at num1,
+//If i is equal to num1.length - 1; return true
+//else return false;
 
 const helper = (num) => {
   return num.toString().split("").sort();
@@ -27,21 +30,18 @@ function sameFrequency(num1, num2) {
 
   if (str1.length !== str2.length) return false;
 
-  const freqCount = {};
+  let i = 0;
 
-  for (const num of str1) {
-    freqCount[num] = (freqCount[num] || 0) + 1;
-  }
-
-  for (const num of str2) {
-    if (freqCount[num]) {
-      freqCount[num]--;
-    } else {
-      return false;
+  for (let j = 0; j < str2.length; j++) {
+    if (i === str1.length - 1) {
+      return true;
+    }
+    if (str1[i] === str2[j]) {
+      i++;
     }
   }
 
-  return true;
+  return false;
 }
 
-console.log(sameFrequency(3529578, 5879385));
+sameFrequency(128, 812);
